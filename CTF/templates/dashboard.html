@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - BlogSphere</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-blog"></i> BlogSphere
+            </div>
+            <ul>
+                <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/view?page=post1.html"><i class="fas fa-newspaper"></i> Latest Posts</a></li>
+                <li><a href="/search"><i class="fas fa-search"></i> Search</a></li>
+                <li><a href="/login" class="login-nav"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <h1><i class="fas fa-tachometer-alt"></i> Welcome to Your Dashboard</h1>
+            
+            <div class="dashboard-content">
+                <div class="dashboard-card">
+                    <h2><i class="fas fa-user"></i> Your Profile</h2>
+                    <p>Manage your account settings and preferences.</p>
+                    <a href="#" class="dashboard-button"><i class="fas fa-edit"></i> Edit Profile</a>
+                </div>
+
+                <div class="dashboard-card">
+                    <h2><i class="fas fa-file-alt"></i> Your Posts</h2>
+                    <p>View and manage your blog posts.</p>
+                    <a href="#" class="dashboard-button"><i class="fas fa-cog"></i> Manage Posts</a>
+                </div>
+
+                <div class="dashboard-card">
+                    <h2><i class="fas fa-chart-line"></i> Analytics</h2>
+                    <p>Track your blog's performance.</p>
+                    <a href="#" class="dashboard-button"><i class="fas fa-chart-bar"></i> View Analytics</a>
+                </div>
+            </div>
+
+            <div class="dashboard-actions">
+                <a href="/" class="dashboard-button"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About BlogSphere</h3>
+                <p>Your trusted source for technology insights and cybersecurity knowledge.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/view?page=post1.html">Latest Posts</a></li>
+                    <li><a href="/search">Search</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <i class="fab fa-twitter"></i></a>
+                    <i class="fab fa-facebook"></i></a>
+                    <i class="fab fa-linkedin"></i></a>
+                    <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 BlogSphere. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

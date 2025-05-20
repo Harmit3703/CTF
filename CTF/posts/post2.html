@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Trends 2023 - BlogSphere</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-blog"></i> BlogSphere
+            </div>
+            <ul>
+                <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/view?page=post1.html"><i class="fas fa-newspaper"></i> Latest Posts</a></li>
+                <li><a href="/search"><i class="fas fa-search"></i> Search</a></li>
+                <li><a href="/login" class="login-nav"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="blog-post">
+            <div class="post-header">
+                <div class="post-image">
+                    <img src="/static/images/download (3).jpg" alt="Trends">
+                </div>
+                <div class="post-title">
+                    <h1>Tech Trends 2023</h1>
+                    <div class="post-meta">
+                        <span><i class="fas fa-user"></i> Tech Expert</span>
+                        <span><i class="fas fa-calendar"></i> April 20, 2023</span>
+                        <span><i class="fas fa-clock"></i> 7 min read</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p class="lead">As we move through 2023, several technology trends are shaping the future of our digital landscape. Let's explore the most significant developments.</p>
+                
+                <h2>Artificial Intelligence and Machine Learning</h2>
+                <p>AI and ML continue to revolutionize various industries. Key developments include:</p>
+                <ul>
+                    <li>Advanced natural language processing</li>
+                    <li>Computer vision applications</li>
+                    <li>Predictive analytics</li>
+                    <li>Automated decision-making systems</li>
+                </ul>
+                
+                <h2>Cybersecurity Evolution</h2>
+                <p>With increasing digital threats, cybersecurity remains a top priority:</p>
+                <ul>
+                    <li>Zero-trust architecture</li>
+                    <li>AI-powered threat detection</li>
+                    <li>Quantum-resistant cryptography</li>
+                    <li>Enhanced endpoint protection</li>
+                </ul>
+                
+                <h2>Cloud Computing Advancements</h2>
+                <p>The cloud continues to evolve with new capabilities:</p>
+                <ul>
+                    <li>Serverless computing</li>
+                    <li>Multi-cloud strategies</li>
+                    <li>Edge computing integration</li>
+                    <li>Cloud-native development</li>
+                </ul>
+                
+                <h2>Internet of Things (IoT)</h2>
+                <p>IoT is expanding into new domains:</p>
+                <ul>
+                    <li>Smart cities infrastructure</li>
+                    <li>Industrial IoT applications</li>
+                    <li>Healthcare monitoring systems</li>
+                    <li>Connected vehicles</li>
+                </ul>
+
+                <div class="post-tags">
+                    <span class="tag"><i class="fas fa-tag"></i> Technology</span>
+                    <span class="tag"><i class="fas fa-tag"></i> AI</span>
+                    <span class="tag"><i class="fas fa-tag"></i> Cybersecurity</span>
+                    <span class="tag"><i class="fas fa-tag"></i> Cloud Computing</span>
+                </div>
+            </div>
+        </article>
+
+        <section class="related-posts">
+            <h2><i class="fas fa-thumbs-up"></i> You Might Also Like</h2>
+            <div class="post-grid">
+                <article class="post-card">
+                    <div class="post-image">
+                        <img src="/static/images/98e90a206076c70d7fc86b5f89426170146dc9ac-1584x988.png" alt="Cybersecurity Authentication">
+                    </div>
+                    <div class="post-content">
+                        <h3><a href="/view?page=post1.html">The Art of Blogging</a></h3>
+                        <p>Learn the secrets of successful blogging in the digital age.</p>
+                        <div class="post-meta">
+                            <span><i class="fas fa-user"></i> Admin</span>
+                            <span><i class="fas fa-calendar"></i> April 20, 2023</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About BlogSphere</h3>
+                <p>Your trusted source for technology insights and cybersecurity knowledge.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/view?page=post1.html">Latest Posts</a></li>
+                    <li><a href="/search">Search</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <i class="fab fa-twitter"></i></a>
+                    <i class="fab fa-facebook"></i></a>
+                    <i class="fab fa-linkedin"></i></a>
+                    <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 BlogSphere. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

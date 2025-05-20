@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - BlogSphere</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script>
+        // Function to set a flag in the cookies
+        function setFlag() {
+            fetch('/set_flag')
+            .then(response => response.text())
+            .then(data => console.log("Flag set via /set_flag route:", data))
+            .catch(error => console.error("Error setting flag:", error));
+    }
+
+        // Check for XSS attack
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('query');
+
+            // If the query contains any HTML tags, set the flag
+        const htmlTagPattern = /<[^>]+>/; // Regex to detect any HTML tags
+        if (query && htmlTagPattern.test(query)) {
+            setFlag();
+        }
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-blog"></i> BlogSphere
+            </div>
+            <ul>
+                <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/view?page=post1.html"><i class="fas fa-newspaper"></i> Latest Posts</a></li>
+                <li><a href="/search"><i class="fas fa-search"></i> Search</a></li>
+                <li><a href="/login" class="login-nav"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main>
+        <section class="search-results">
+            <h1><i class="fas fa-search"></i> Search Results</h1>
+            
+            <div class="search-again">
+                <form method="get" action="/search" class="search-form">
+                    <div class="search-input-group">
+                        <i class="fas fa-search"></i>
+                        <input type="text" name="query" value="{{ query }}" placeholder="Enter keywords...">
+                    </div>
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </form>
+            </div>
+
+            <div id="results">
+                {{ result|safe }}
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About BlogSphere</h3>
+                <p>Your trusted source for technology insights and cybersecurity knowledge.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/view?page=post1.html">Latest Posts</a></li>
+                    <li><a href="/search">Search</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <i class="fab fa-twitter"></i></a>
+                    <i class="fab fa-facebook"></i></a>
+                    <i class="fab fa-linkedin"></i></a>
+                    <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 BlogSphere. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
